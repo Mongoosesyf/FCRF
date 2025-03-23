@@ -1,0 +1,158 @@
+Here is your past failed trail and your task:
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: heat some apple and put it in fridge.
+> think: To solve the task, I need to find and take an apple, then heat it with the microwave, and finally put it in/on the fridge.
+OK.
+> think: First, I need to find an apple. An apple is more likely to be found in/on the fridge (1), countertop (1-3), diningtable (1), drawer (1-3), cabinet (1-6), garbagecan (1). I can start by checking the fridge 1.
+OK.
+> go to fridge 1
+The fridge 1 is closed.
+> open fridge 1
+You open the fridge 1. The fridge 1 is open. In it, you see a bread 3, a bread 2, a bread 1, a lettuce 1, a tomato 2, and a tomato 1.
+> go to countertop 1
+On the countertop 1, you see a cellphone 1, a creditcard 3, a creditcard 1, and a pan 1.
+> go to countertop 2
+On the countertop 2, you see a creditcard 2, a knife 2, a knife 1, a statue 1, and a tomato 3.
+> go to countertop 3
+On the countertop 3, you see a bowl 2, a bowl 1, a butterknife 1, a cellphone 3, a cellphone 2, a cup 1, a houseplant 1, a knife 3, a plate 3, a soapbottle 2, a spatula 1, a spoon 1, a vase 3, and a vase 2.
+> go to garbagecan 1
+On the garbagecan 1, you see a apple 2, a apple 1, a egg 2, a egg 1, a potato 2, and a potato 1.
+> think: I found an apple (1) in/on the garbagecan (1). Next, I need to take it.
+OK.
+> take apple 1 from garbagecan 1
+You pick up the apple 1 from the garbagecan 1.
+> think: Now I have the apple (1). Next, I need to go to the microwave (1) and heat it.
+OK.
+> go to microwave 1
+The microwave 1 is closed.
+> open microwave 1
+You open the microwave 1.
+> put apple 1 in/on microwave 1
+You put the apple 1 in/on the microwave 1.
+> heat apple 1 with microwave 1
+Nothing happens.
+> heat apple 1 with microwave 1
+Nothing happens.
+
+STATUS: FAIL
+
+Here is your latest successful trail for the same task:
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: heat some apple and put it in fridge.
+> think: To solve the task, I need to find and take an apple, then heat it with the microwave, and finally put it in/on the fridge.
+OK.
+> think: First, I need to find an apple. An apple is more likely to be found in/on the fridge (1), countertop (1-3), diningtable (1), drawer (1-3), cabinet (1-6), garbagecan (1). I can start by checking the fridge 1.
+OK.
+> go to garbagecan 1
+On the garbagecan 1, you see a apple 2, a apple 1, a egg 2, a egg 1, a potato 2, and a potato 1.
+> think: I found an apple (1) in/on the garbagecan (1). Next, I need to take it.
+OK.
+> take apple 1 from garbagecan 1
+You pick up the apple 1 from the garbagecan 1.
+> think: Now I have the apple (1). Next, I need to go to the microwave (1) and heat it.
+OK.
+> go to microwave 1
+The microwave 1 is closed.
+> heat apple 1 with microwave 1
+You heat the apple 1 using the microwave 1.
+> think: Now I have heated the apple (1). Next, I need to put it in/on the fridge (1).
+OK.
+> go to fridge 1
+The fridge 1 is open. In it, you see a bread 3, a bread 2, a bread 1, a lettuce 1, a tomato 2, and a tomato 1.
+> put apple 1 in/on fridge 1
+You put the apple 1 in/on the fridge 1.
+
+STATUS: OK
+
+Lesson summarize: I should use microwave to heat, goto microwave, then directly heat object with microwave.
+
+
+Here is your past failed trail and your task:
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: find two peppershaker and put them in drawer.
+> think: To solve the task, I need to find and take the first peppershaker, then put it in/on the drawer, then find and take the second peppershaker, then put it in/on the drawer.
+OK.
+> think: First I need to find the first peppershaker. A peppershaker is more likely to appear in/on cabinet (1-6), countertop (1-3), drawer (1-3), shelf (1-3). I can check one by one, starting with cabinet 1.
+OK.
+> go to cabinet 1
+On the cabinet 1, you see a dishsponge 1, a glassbottle 1, and a peppershaker 2.
+> take peppershaker 2 from cabinet 1
+You pick up the peppershaker 2 from the cabinet 1.
+> think: Now I find the first peppershaker (2). Next, I need to put it in/on the drawer. I can find the second peppershaker later. I will start by putting this one in/on the drawer.
+OK.
+> go to drawer 1
+The drawer 1 is closed.
+>
+Nothing happens.
+> open drawer 1
+You open the drawer 1. The drawer 1 is open. In it, you see a creditcard 1, and a spatula 1.
+> put peppershaker 2 in/on drawer 1
+You put the peppershaker 2 in/on the drawer 1.
+> think: Now I put the first peppershaker in/on the drawer. Next, I need to find the second peppershaker. I can check countertop (1-3), drawer (1-3), shelf (1-3) to find it.
+OK.
+> go to countertop 1
+On the countertop 1, you see a egg 1, and a potato 3.
+> think: The second peppershaker is not here. I will check countertop 2 next.
+OK.
+> go to countertop 2
+On the countertop 2, you see a apple 1, a bread 2, a bread 1, a butterknife 2, a butterknife 1, a glassbottle 2, a papertowelroll 1, a potato 1, and a soapbottle 1.
+> think: The second peppershaker is not here either. I will check countertop 3 next.
+OK.
+> go to countertop 3
+On the countertop 3, you see a butterknife 3, a cellphone 1, a fork 1, a houseplant 1, a knife 2, a knife 1, a lettuce 2, a peppershaker 4, a pot 2, a statue 2, and a statue 1.
+> take peppershaker 4 from countertop 3
+You pick up the peppershaker 4 from the countertop 3.
+> think: Now I find the second peppershaker (4). Next, I need to put it in/on the drawer.
+OK.
+> go to drawer 2
+The drawer 2 is open.
+> put peppershaker 4 in/on drawer 2
+You put the peppershaker 4 in/on the drawer 2.
+
+STATUS: FAIL
+
+Here is your latest successful trail for the same task:
+
+Here is the task:
+You are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+Your task is to: find two peppershaker and put them in drawer.
+> think: To solve the task, I need to find and take the first peppershaker, then put it in/on the drawer, then find and take the second peppershaker, then put it in/on the drawer.
+OK.
+> think: First I need to find the first peppershaker. A peppershaker is more likely to appear in/on cabinet (1-6), countertop (1-3), drawer (1-3), shelf (1-3). I can check one by one, starting with cabinet 1.
+OK.
+> go to cabinet 1
+On the cabinet 1, you see a dishsponge 1, a glassbottle 1, and a peppershaker 2.
+> take peppershaker 2 from cabinet 1
+You pick up the peppershaker 2 from the cabinet 1.
+> think: Now I find the first peppershaker (2). Next, I need to put it in/on the drawer. I can find the second peppershaker later. I will start by putting this one in/on the drawer.
+OK.
+> go to drawer 1
+The drawer 1 is closed.
+>
+Nothing happens.
+> open drawer 1
+You open the drawer 1. The drawer 1 is open. In it, you see a creditcard 1, and a spatula 1.
+> put peppershaker 2 in/on drawer 1
+You put the peppershaker 2 in/on the drawer 1.
+> think: Now I put the first peppershaker in/on the drawer. Next, I need to find the second peppershaker. I can check countertop (1-3), drawer (1-3), shelf (1-3) to find it.
+OK.
+> go to countertop 3
+On the countertop 3, you see a butterknife 3, a cellphone 1, a fork 1, a houseplant 1, a knife 2, a knife 1, a lettuce 2, a peppershaker 4, a pot 2, a statue 2, and a statue 1.
+> take peppershaker 4 from countertop 3
+You pick up the peppershaker 4 from the countertop 3.
+> think: Now I find the second peppershaker (4). Next, I need to put it in/on the same drawer.
+OK.
+> go to drawer 1
+The drawer 1 is open. In it, you see a creditcard 1, a peppershaker 2, and a spatula 1.
+> put peppershaker 4 in/on drawer 1
+You put the peppershaker 4 in/on the drawer 1.
+
+STATUS: OK
+
+Lesson summarize: When I have to put two objects, I should separately find them, but put the two objects into the same container.
