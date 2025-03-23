@@ -5,4 +5,7 @@ FCRF: Flexible Constructivism Reflection for Long-Horizon Robotic Task Planning 
 ### Run
 Run the program by executing `./run_reflexion.sh` in the alfworld_runs directory.
 
-remember to export '''OPENAI_API_KEY=<your key>'''
+remember to export 
+```
+OPENAI_API_KEY=<your key>
+```
