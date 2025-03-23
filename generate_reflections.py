@@ -1,6 +1,4 @@
-# syf搭建的Constructivism Self- Reflection方法框架
-# 核心：分为mentor和reasoner模型，reasoner负责推理;
-# mentor提醒reasoner保留正确部分轨迹经验(task specific)，并收集错误经验维护pool，每次调用检查错误
+# Constructivism Self- Reflection
 from numbers import Complex
 
 from utils import get_completion
