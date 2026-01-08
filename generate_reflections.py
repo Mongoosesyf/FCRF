@@ -41,6 +41,7 @@ def _generate_reflection_query(log_str: str, memory: List[str]) -> str:
     return query
 
 
+# 生成experience, 论文图绿色部分
 def _generate_experience_query(log_str: str, memory: List[str], v: str) -> str:
     # syf add: 此函数是文本构建拼接生成reflexion需要的prompt
 
@@ -75,6 +76,7 @@ def _generate_experience_query(log_str: str, memory: List[str], v: str) -> str:
     return query
 
 
+# 从lesson pool中抽取失败lesson, 论文图红色部分（不是lesson pool更新维护）
 def _generate_lesson_query(log_str: str, memory: List[str], v: str) -> str:
     with open("constructivism_prompts/LLM_pool.txt", 'r') as f1:  # LLM抽取的pool
         mentor_lesson_pool = f1.read()
@@ -112,6 +114,7 @@ def _generate_lesson_query(log_str: str, memory: List[str], v: str) -> str:
     return query
 
 
+# 将成败经验建构整合为下一轮理想plan，论文图蓝色部分
 def _generate_plan_query(log_str: str, memory: List[str], experience, lesson) -> str:
     """Allows the Agent to reflect upon a past experience."""
     with open("constructivism_prompts/plan_examples.txt", 'r') as f:
@@ -145,6 +148,7 @@ def _generate_plan_query(log_str: str, memory: List[str], experience, lesson) ->
     return query
 
 
+# 简单反思步骤使用，将核心exp包装为plan形式
 def _generate_exp_rfl_plan_query(log_str: str, memory: List[str], experience) -> str:
     """Allows the Agent to reflect upon a past experience."""
     with open("reflexion_with_exp_few_shot_examples.txt", 'r') as f:
@@ -177,6 +181,7 @@ def _generate_exp_rfl_plan_query(log_str: str, memory: List[str], experience) ->
     return query
 
 
+# 使用上一轮错误、这一轮正确的成功勘误轨迹，summarize出知识条目，形如[clean][how to use sink...]，更新维护lesson pool知识库
 def Update_Lesson_Pool(log_str: str, last_trail_log_str: str, v: str, pool_file_path = "./constructivism_prompts/LLM_pool.txt"):
 
     scenario: str = _get_scenario(log_str)
@@ -216,6 +221,7 @@ def Update_Lesson_Pool(log_str: str, last_trail_log_str: str, v: str, pool_file_
         f.write(current_env_tip)
 
 
+# reflexion原始的memory更新方法，此处仅作保留
 def reflexion_orig_update_memory(trial_log_path: str, env_configs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """Updates the given env_config with the appropriate reflections."""
     with open(trial_log_path, 'r') as f:
@@ -240,6 +246,7 @@ def reflexion_orig_update_memory(trial_log_path: str, env_configs: List[Dict[str
     return env_configs
 
 
+# FCRF的memory更新函数，顶层建构主义反思核心函数
 def update_memory(trial_log_path: str, env_configs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """Updates the given env_config with the appropriate reflections."""
     with open(trial_log_path, 'r') as f:
@@ -282,6 +289,7 @@ def update_memory(trial_log_path: str, env_configs: List[Dict[str, Any]]) -> Lis
     return env_configs
 
 
+# 简单反思时仅使用成功经验的memory更新函数
 def update_exp_rfl_memory(trial_log_path: str, env_configs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """Updates the given env_config with the appropriate reflections."""
     with open(trial_log_path, 'r') as f:
@@ -331,6 +339,7 @@ PREFIXES = {
 '''
 def eval_refl_difficulty(num_trials, task_str, i, env_configs: List[Dict[str, Any]]):
 
+    # '类型': [interaction obj num，interaction operation num]
     complex_dict = {'put': [1, 1],  # 3 simple
                     'clean': [2, 2],  # 1
                     'heat' : [2, 2],  # 1
@@ -398,6 +407,8 @@ def flexible_update_memory(num_trials, trial_idx, trial_log_path: str, env_confi
             # CRFL 综合exp+lesson反思
             # return update_memory(trial_log_path, env_configs)
 
+            # if trial_idx <= env_configs[i]['simple_rfl_num']:
+
             # if unsolved, get reflection and update env config
             if not env['is_success'] and not env['skip']:
                 if len(env['memory']) > 3:
@@ -440,3 +451,4 @@ def flexible_update_memory(num_trials, trial_idx, trial_log_path: str, env_confi
 
 
     return env_configs
+
